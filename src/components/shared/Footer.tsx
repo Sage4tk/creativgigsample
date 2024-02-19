@@ -2,17 +2,17 @@ const Footer:React.FC = () => {
     return (
         <>
         <div className="flex flex-col items-center bg-[#F4EFFF] py-[66px]">
-            <div className="flex flex-row items-center justify-between w-[1200px]">
+            <div className="flex lg:flex-row flex-col items-center justify-between xl:w-[1200px] lg:w-[1000px] w-full">
                 
-                <div className="flex-col items-center">
+                <div className="flex-col items-center mb-16 lg:mb-0 ">
                     <img className="mx-auto mb-[18px]" src="/img/logo.svg" />
 
                     <p className="text-center w-[320px] text-[#303030]">We are a team of talented and passionate professionals who are dedicated to delivering exceptional creative solutions. From captivating graphic designs to stunning illustrations, our agency is here to bring your ideas to life.</p>
                 </div>
 
-                <div className="flex-grow flex flex-row justify-between px-[77px]">
+                <div className="flex-grow flex md:flex-row flex-col justify-between px-[77px] mb-14 lg:mb-0">
 
-                    <div className="flex flex-col">
+                    <div className="flex flex-col mb-8 lg:mb-0">
                         <p className="text-main text-[1.125rem] font-bold mb-[13px]">Categories</p>
 
 
@@ -41,7 +41,7 @@ const Footer:React.FC = () => {
                         </ul>
 
                     </div>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col lg:mx-0 md:mx-10  mx-0 mb-8 lg:mb-0">
                         <p className="text-main text-[1.125rem] font-bold mb-[13px]">I need a design</p>
 
 
@@ -73,7 +73,7 @@ const Footer:React.FC = () => {
                         </ul>
 
                     </div>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col mb-8 lg:mb-0">
                         <p className="text-main text-[1.125rem] font-bold mb-[13px]">Categories</p>
 
 
@@ -105,9 +105,9 @@ const Footer:React.FC = () => {
 
                 </div>
 
-                <div className="flex flex-col">
+                <div className="flex lg:flex-col flex-row">
                     <img className="cursor-pointer" src="/img/icons/socials/ig.svg" />
-                    <img className="py-[24px] cursor-pointer" src="/img/icons/socials/fb.svg" />
+                    <img className="lg:py-[24px] lg:mx-0 mx-8 cursor-pointer" src="/img/icons/socials/fb.svg" />
                     <img className="cursor-pointer" src="/img/icons/socials/twitter.svg" />
                 </div>
                 
@@ -115,7 +115,7 @@ const Footer:React.FC = () => {
 
         </div>
         <div className="flex flex-col items-center bg-main justify-center py-[20px]">
-            <p className="text-white text-[0.875rem]">Copyright © 2023 All rights are reserved Creative Gig. Trademarks and brands are the property of their respective owners.</p>
+            <p className="text-white lg:text-[0.875rem] text-[0.6rem] px-4 lg:px-0">Copyright © 2023 All rights are reserved Creative Gig. Trademarks and brands are the property of their respective owners.</p>
         </div>
         </>
     )

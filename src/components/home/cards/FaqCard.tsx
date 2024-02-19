@@ -18,10 +18,10 @@ const FaqCard:React.FC<IFaqCardProps> = ({
     return (
         <div className={`mb-[${(bottom || openDescription) ? "0":"20px"}] overflow-hidden`}>
             <button onClick={() => setOpenDescription(state => !state)} className={`flex flex-row items-center justify-between bg-[#F4EFFF] p-[20px] w-full`}>
-                <p className="text-[1.375rem] text-main">{title}</p>
+                <p className="lg:text-[1.375rem] text-[1rem] text-main w-[85%] md:w-auto">{title}</p>
 
-                <div>
-                    <img src={openDescription ? "/img/icons/minus.svg":"/img/icons/plus.svg"} />
+                <div className="">
+                    <img className="" src={openDescription ? "/img/icons/minus.svg":"/img/icons/plus.svg"} />
                 </div>
             </button>
             {openDescription && (

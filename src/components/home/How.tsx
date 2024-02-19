@@ -2,16 +2,16 @@ const How:React.FC = () => {
     return (
         <div className="flex flex-col items-center">
 
-            <div className="w-[1200px] flex flex-col items-center pt-[101px]">
+            <div className="xl:w-[1200px] lg:w-[1000px] w-full flex flex-col items-center pt-[101px]">
 
-                <h6 className="text-main font-bold text-[2.8125rem] mb-[42px]">How does Creativ Gig work?</h6>
+                <h6 className="text-main font-bold lg:text-[2.8125rem] text-[1.8125rem] text-center  mb-[42px]">How does Creativ Gig work?</h6>
 
-                <div className="flex flex-row">
+                <div className="flex lg:flex-row flex-col">
 
                     <div>
-                        <div className="w-[508px] flex flex-row">
+                        <div className="lg:w-[508px] w-full lg:p-0 p-2 flex flex-row">
                             
-                            <div className="w-[300px] mr-[9px]">
+                            <div className="lg:w-[300px] w-[59%] mr-[9px]">
 
                                 <div style={{backgroundImage: 'url("/img/how/pictwo.png")', backgroundSize: "cover"}} className="h-[265px] mb-[10px] w-full bg-gray-400 rounded-[6px]">
 
@@ -23,7 +23,7 @@ const How:React.FC = () => {
 
                             </div>
 
-                            <div style={{backgroundImage: 'url("/img/how/picone.png")', backgroundSize: "cover"}} className="bg-gray-400 h-[413px] w-[199px] rounded-[6px]">
+                            <div style={{backgroundImage: 'url("/img/how/picone.png")', backgroundSize: "cover"}} className="bg-gray-400 h-[413px] lg:w-[199px] w-[39%] rounded-[6px]">
                                 
                             </div>
 
