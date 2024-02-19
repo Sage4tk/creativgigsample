@@ -6,6 +6,7 @@ import Hero from "../components/home/Hero";
 import How from "../components/home/How";
 import SearchBar from "../components/home/SearchBar";
 import Services from "../components/home/Services";
+import ContactUs from "../components/shared/ContactUs";
 import Footer from "../components/shared/Footer";
 import Nav from "../components/shared/Nav";
 
@@ -24,6 +25,8 @@ const Index:React.FC = () => {
         <BuildBrand />
         
         <How />
+
+        <ContactUs />
 
         <FAQ />
 

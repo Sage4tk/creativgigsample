@@ -2,7 +2,7 @@ const How:React.FC = () => {
     return (
         <div className="flex flex-col items-center">
 
-            <div className="xl:w-[1200px] lg:w-[1000px] w-full flex flex-col items-center pt-[101px]">
+            <div className="xl:w-[1200px] lg:w-[1000px] w-full flex flex-col items-center pt-[101px] pb-[44px]">
 
                 <h6 className="text-main font-bold lg:text-[2.8125rem] text-[1.8125rem] text-center  mb-[42px]">How does Creativ Gig work?</h6>
 
