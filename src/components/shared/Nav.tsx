@@ -64,12 +64,12 @@ const Nav:React.FC = () => {
             </div>
 
             <div className="flex flex-col items-center">
-                <div className="xl:w-[1200px] lg:w-[1000px] w-full lg:py-[12px] py-[18px] flex flex-row justify-between">
+                <div className="xl:w-[1200px] lg:w-[1000px] w-full lg:py-[12px] py-[18px] flex flex-row justify-between relative">
 
-                    <img onClick={() => setNavOpen(item => !item)} className="w-[181px] h-[62.03px] lg:mx-0 mx-auto" src="/img/logo.svg" />
+                    <img className="w-[181px] h-[62.03px] lg:mx-0 mx-auto" src="/img/logo.svg" />
 
                     {/* <div className={`lg:flex lg:w-auto lg:h-auto lg:top-auto lg:left-auto lg:relative flex-row items-center fixed bg-white top-0 left-[${navOpen ? "0px":"100vw"}] w-screen h-screen`}> */}
-                    <div className={`lg:flex lg:w-auto lg:h-auto lg:top-auto lg:left-auto lg:relative flex-row items-center fixed bg-white top-0 transition-all ${navOpen ? "left-0":"left-[100vw]"} w-screen h-screen`}>
+                    <div className={`lg:flex lg:w-auto lg:h-auto lg:top-auto lg:left-auto lg:relative flex-row items-center fixed bg-white top-0 transition-all ${navOpen ? "left-0":"left-[100vw]"} w-screen h-screen z-20`}>
 
                         <div className="flex lg:w-auto lg:flex-row xl:mr-[160px] lg:mr-[50px] flex-col items-center w-full p-8 lg:p-0">
 
@@ -100,7 +100,6 @@ const Nav:React.FC = () => {
                             
 
 
-
                         </div>
 
                         {/* <button style={{background: "linear-gradient(273.32deg, #FF35F7 -1.51%, #673DE6 113.89%)"}} className="px-[24px] py-2"> */}
@@ -108,7 +107,14 @@ const Nav:React.FC = () => {
                             <span className="text-white mr-[14px]">Get a quote</span>
                             <img src="/img/icons/arrow1.svg" />
                         </button>
+                        <button onClick={() => setNavOpen(bool => !bool)} className="absolute top-4 right-4 lg:hidden">
+                            <img src="/img/icons/close.svg" className="h-auto w-[40px]"  />
+                        </button>
                     </div>
+
+                    <button  onClick={() => setNavOpen(item => !item)} className="absolute top-[50%] translate-y-[-50%] right-[5%]">
+                        <img className="h-auto w-[30px]" src="/img/icons/menu.svg" />
+                    </button>
 
                 </div>
             </div>
