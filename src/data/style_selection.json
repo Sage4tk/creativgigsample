@@ -1,0 +1,35 @@
+[
+    {
+        "img": "/img/styles/wordmark.png",
+        "title": "wordmark"
+    },
+    {
+        "img": "/img/styles/abstract.png",
+        "title": "abstract"
+    },
+    {
+        "img": "/img/styles/emblem.png",
+        "title": "emblem"
+    },
+    {
+        "img": "/img/styles/combination.png",
+        "title": "combination"
+    },
+    {
+        "img": "/img/styles/nopref.png",
+        "title": "nopreference"
+    },
+    {
+        "img": "/img/styles/lettermark.png",
+        "title": "lettermark"
+    },
+    {
+        "img": "/img/styles/wordmark1.png",
+        "title": "wordmark1"
+    },
+    {
+        "img": "/img/styles/wordmark2.png",
+        "title": "wordmark2"
+    }
+    
+]
