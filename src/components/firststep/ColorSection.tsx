@@ -1,10 +1,10 @@
-import { IFirstForm } from "./interface";
+import { IForm } from "./interface";
 import ColorSelection from "./cards/ColorSelection";
 import { PALLETE_EIGHT, PALLETE_FIVE, PALLETE_FOUR, PALLETE_NINE, PALLETE_ONE, PALLETE_SEVEN, PALLETE_SIX, PALLETE_TEN, PALLETE_THREE, PALLETE_TWO } from "../../data/pallete";
 
 interface IColorSectionProps {
-    form: IFirstForm,
-    setForm: (arg:IFirstForm) => void   
+    form: IForm,
+    setForm: (arg:IForm) => void   
 }
 
 const ColorSection:React.FC<IColorSectionProps> = ({

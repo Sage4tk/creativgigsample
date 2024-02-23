@@ -1,4 +1,12 @@
-const FormNavigatior:React.FC = () => {
+interface IFormNavigatiorProps {
+    nextStage:number,
+    setStage:(arg:number) => void
+}
+
+const FormNavigatior:React.FC<IFormNavigatiorProps> = ({
+    nextStage,
+    setStage
+}) => {
     return (
         <div className="flex flex-col items-center w-full">
 
@@ -9,7 +17,7 @@ const FormNavigatior:React.FC = () => {
                     <button className="md:text-[1.125rem] text-[0.9rem] font-medium text-sub border-sub border rounded-[4px] h-[42px] hover:bg-sub hover:text-white active:opacity-70">
                         SAVE
                     </button>
-                    <button className="md:text-[1.125rem] text-[0.9rem] font-medium rounded-[4px] h-[42px] flex flex-row bg-border hover:shadow-lg active:opacity-75">
+                    <button onClick={() => setStage(nextStage)} className="md:text-[1.125rem] text-[0.9rem] font-medium rounded-[4px] h-[42px] flex flex-row bg-border hover:shadow-lg active:opacity-75">
                         <div className="text-white flex-grow bg-pink rounded-[4px] h-full flex items-center justify-center">
                             Continue
                         </div>

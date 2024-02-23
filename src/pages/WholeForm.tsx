@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IForm } from "../components/firststep/interface";
 import FirstStep from "./FirstStep";
 import SecondStep from "./SecondStep";
@@ -20,12 +20,19 @@ const WholeForm:React.FC = () => {
         cost: 0
     });
 
-    const [stage, setState] = useState<number>(0);
+    const [stage, setStage] = useState<number>(0);
+
+    // scroll to top on change
+    useEffect(() => {
+        window.scrollTo({
+            top: 0
+        });
+    }, [stage]);
 
     return (
         <>
         
-        {stage === 0 && <FirstStep />}
+        {stage === 0 && <FirstStep setStage={setStage} form={form} setForm={setForm} />}
         {stage === 1 && <SecondStep />}
         {stage === 2 && <LastStep />}
 

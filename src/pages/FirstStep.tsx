@@ -1,7 +1,5 @@
-import { useState } from "react";
-
 import ColorSection from "../components/firststep/ColorSection";
-import { IFirstForm } from "../components/firststep/interface";
+import { IForm } from "../components/firststep/interface";
 import Nav from "../components/shared/Nav";
 import Footer from "../components/shared/Footer";
 import Heading from "../components/firststep/Heading";
@@ -13,12 +11,17 @@ import Services from "../components/firststep/Services";
 import FAQ from "../components/home/FAQ";
 import FormNavigatior from "../components/firststep/FormNavigator";
 
+export interface IFirstStepProps {
+    form: IForm,
+    setForm: (form:IForm) => void,
+    setStage: (state:number) => void
+}
 
-
-const FirstStep:React.FC = () => {
-    const [form, setForm] = useState<IFirstForm>({
-        colors: []
-    })
+const FirstStep:React.FC<IFirstStepProps> = ({
+    form, 
+    setForm,
+    setStage
+}) => {
 
     return (
         <>
@@ -37,7 +40,7 @@ const FirstStep:React.FC = () => {
 
         <UploadFile />
 
-        <FormNavigatior />
+        <FormNavigatior setStage={setStage} nextStage={1} />
 
         <Services />
 

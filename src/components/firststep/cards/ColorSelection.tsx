@@ -1,9 +1,9 @@
-import { IFirstForm } from "../interface";
+import {  IForm } from "../interface";
 
 interface IColorSelectionProps {
     width?: string,
-    form: IFirstForm,
-    setForm: (arg:IFirstForm) => void,
+    form: IForm,
+    setForm: (arg:IForm) => void,
     colors: Array<string>
     // colorSet: Array<string>
 }

@@ -2,9 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import Index from './pages/Index';
 import HowItWorks from './pages/HowItWorks';
-import FirstStep from './pages/FirstStep';
-import SecondStep from './pages/SecondStep';
-import LastStep from './pages/LastStep';
+import WholeForm from './pages/WholeForm';
 
 const router = createBrowserRouter([
   {
@@ -12,20 +10,12 @@ const router = createBrowserRouter([
     element: <Index />
   },
   {
-    path: "/page1",
+    path: "/how",
     element: <HowItWorks />
   },
   {
-    path: "/page2",
-    element: <FirstStep />
-  },
-  {
-    path: "/page3",
-    element: <SecondStep /> 
-  },
-  {
-    path: "/page4",
-    element: <LastStep />
+    path: "/form",
+    element: <WholeForm />
   }
 ]);
 
