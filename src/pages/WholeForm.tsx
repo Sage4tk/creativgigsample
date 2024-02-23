@@ -8,6 +8,7 @@ const WholeForm:React.FC = () => {
 
     /** STATES **/
     const [form, setForm] = useState<IForm>({
+        name: "",
         service: "",
         industry: "",
         about: "",
@@ -33,8 +34,8 @@ const WholeForm:React.FC = () => {
         <>
         
         {stage === 0 && <FirstStep setStage={setStage} form={form} setForm={setForm} />}
-        {stage === 1 && <SecondStep />}
-        {stage === 2 && <LastStep />}
+        {stage === 1 && <SecondStep setStage={setStage} form={form} setForm={setForm} />}
+        {stage === 2 && <LastStep form={form} setForm={setForm} />}
 
         </>
     )

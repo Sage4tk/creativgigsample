@@ -3,6 +3,7 @@ export interface IFirstForm {
 }
 
 export interface IForm {
+    name:string,
     service: string,
     industry: string,
     about: string,
@@ -13,4 +14,9 @@ export interface IForm {
     files: Array<File>,
     option: string,
     cost: number
+}
+
+export interface IBasicFormProp {
+    form: IForm,
+    setForm: (arg:IForm) => void
 }

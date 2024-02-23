@@ -1,11 +1,15 @@
-interface IPlanCardProps {
+import { useMemo } from "react";
+import { IBasicFormProp } from "../../firststep/interface";
+
+
+interface IPlanCardProps extends IBasicFormProp {
     id: string,
     title: string,
     list: Array<string>,
     original_cost?: number,
     cost: number,
     popular?: boolean,
-    odd: boolean
+    odd: boolean,
 }
 
 const PlanCard:React.FC<IPlanCardProps> = ({
@@ -14,15 +18,32 @@ const PlanCard:React.FC<IPlanCardProps> = ({
     original_cost,
     cost,
     popular,
-    odd
+    odd,
+    form,
+    setForm
 }) => {
-    console.log(original_cost);
+
+    // check if selected
+    const selected = useMemo(() => {
+        return form.service === title
+    }, [form.service])
+
+    // handle on press
+    const handle_press = ():void => {
+        setForm({
+            ...form,
+            service: title,
+            cost: cost
+        })
+    }
 
     return (
-        <div className={`border ${odd ? "border-[#CACACA]":"border-pink"} relative md:w-[32%] w-full rounded-[4px] overflow-hidden`}>
+        <div className={`border ${odd ? "border-[#CACACA]":"border-pink"} relative lg:w-[32%] md:w-[70%] w-full rounded-[4px] mb-12 lg:mb-0 transition-all ${selected && "shadow-xl scale-105"}`}>
 
             {popular && (
-                <div className="absolute">
+                <div className="absolute w-[60%] text-center bg-sub text-white text-[#0.875] px-[14px] pt-[6px] rounded-t-[6px] left-[50%] translate-x-[-50%] bottom-[100%] ">
+                {/* <div className="absolute bg-sub text-white text-[#0.875] px-[14px] pt-[12px] rounded-t-[6px]"> */}
+                    MOST POPULAR
                 </div>                
             )}
 
@@ -46,8 +67,8 @@ const PlanCard:React.FC<IPlanCardProps> = ({
                     <span className="text-[#545454] font-bold text-[1.25rem]">US${cost}</span>
                 </div>
 
-                <button className="w-full font-bold text-sub border border-sub rounded-[4px] py-3 hover:bg-sub hover:text-white active:scale-[99%] active:opacity-95">
-                    SELECT
+                <button onClick={handle_press} className={`w-full font-bold text-sub border border-sub rounded-[4px] py-3 hover:bg-sub hover:text-white active:scale-[99%] active:opacity-95 ${selected ? "bg-sub text-white":""}`}>
+                    {selected ? "SELECTED!":"SELECT"}
                 </button>
                 
 

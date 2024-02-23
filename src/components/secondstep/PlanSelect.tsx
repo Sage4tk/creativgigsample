@@ -1,7 +1,11 @@
 import PLANS from "../../data/plans.json";
+import { IBasicFormProp } from "../firststep/interface";
 import PlanCard from "./cards/PlanCard";
 
-const PlanSelect:React.FC = () => {
+const PlanSelect:React.FC<IBasicFormProp> = ({
+    form,
+    setForm
+}) => {
     return (
         <div className="flex flex-col items-center w-full">
 
@@ -16,10 +20,10 @@ const PlanSelect:React.FC = () => {
 
             </div>
 
-            <div className="w-full lg:w-[900px] md:w-[600px] flex flex-col md:flex-row flex-wrap justify-between pt-[36px]">
+            <div className="w-full lg:w-[900px] md:w-[600px] flex flex-col lg:flex-row flex-wrap justify-between pt-[36px] items-center px-8 lg:px-0">
                 {
                     PLANS.map((props, index) => (
-                        <PlanCard {...props} odd={index % 2 === 0} />
+                        <PlanCard {...props} odd={index % 2 === 0} form={form} setForm={setForm} />
                     ))
                 }
             </div>

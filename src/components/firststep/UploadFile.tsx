@@ -1,10 +1,12 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
+import { IBasicFormProp } from "./interface";
 
-const UploadFile:React.FC = () => {
+const UploadFile:React.FC<IBasicFormProp> = ({
+    form,
+    setForm
+}) => {
 
     const input_ref = useRef<HTMLInputElement | null>(null);
-
-    const [files, setFiles] = useState<Array<File>>([]);
 
     // file upload listener
     const handle_file = (event:React.ChangeEvent<HTMLInputElement>) => {
@@ -15,10 +17,13 @@ const UploadFile:React.FC = () => {
             Array.from(event.target.files).every(files => files.type.includes("image"))
         ) {
 
-            setFiles([
-                ...files,
-                ...Array.from(event.target.files)
-            ]);
+            setForm({
+                ...form,
+                files:[
+                    ...form.files,
+                    ...Array.from(event.target.files)
+                ]
+            });
         } else {
             alert("Please select a valid image.")
         }
@@ -50,13 +55,13 @@ const UploadFile:React.FC = () => {
             }
 
             // add files to state
-            setFiles(prev => [...prev, ...files]);
+            setForm({
+                ...form,
+                files:[...form.files, ...files]
+            });
         }
     }
 
-    useEffect(() => {
-        console.log(files)
-    }, [files]);
 
     return (
         <div className="flex flex-col items-center w-full">
@@ -72,7 +77,7 @@ const UploadFile:React.FC = () => {
                 <div onDragOver={e => e.preventDefault()} onDrop={drag_file} className="border border-[#E0E0E0] border-dashed rounded-[4px] flex flex-col items-center py-[55px]">
 
 
-                    {files.length === 0 && (
+                    {form.files.length === 0 && (
                         <div className="flex flex-col items-center mb-[1rem]">
 
                             <img className="mb-[10px] select-none pointer-events-none" src="/img/icons/file.svg" />
@@ -81,15 +86,15 @@ const UploadFile:React.FC = () => {
                         </div>
                     )}
 
-                    {files.length !== 0 && (
-                        files.map((item,index) => (
+                    {form.files.length !== 0 && (
+                        form.files.map((item,index) => (
                             <div className="mb-4" key={index}>
                                 <p className="text-[0.8rem] text-[#303030]">{item.name}</p>
                             </div>
                         ))
                     )}
 
-                    <button className="font-bold text-sub text-[1rem] border border-sub rounded-full py-[6px] px-[30px]" onClick={() => input_ref.current?.click()}>
+                    <button className="font-bold text-sub text-[1rem] border border-sub rounded-full py-[6px] px-[30px] hover:text-white hover:bg-sub" onClick={() => input_ref.current?.click()}>
                         Add File
                     </button>
 

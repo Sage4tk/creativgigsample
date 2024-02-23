@@ -1,4 +1,18 @@
-const InputForm:React.FC = () => {
+import { IBasicFormProp } from "./interface";
+
+
+const InputForm:React.FC<IBasicFormProp> = ({
+    form,
+    setForm
+}) => {
+
+    const input_listener = (event:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {        
+        setForm({
+            ...form,
+            [event.target.name]: event.target.value
+        })
+    }
+
     return (
         <div className="flex flex-col items-center w-full">
 
@@ -24,7 +38,7 @@ const InputForm:React.FC = () => {
 
                             <p className="text-[#303030] text-[0.875rem] mb-4">This is important. Please carefully check spelling.</p>
 
-                            <input className="h-[47px] border border-[#e0e0e0] rounded-[4px] w-full px-4" />
+                            <input name="name" onChange={input_listener} className="h-[47px] border border-[#e0e0e0] rounded-[4px] w-full px-4" />
 
                         </div>
 
@@ -34,7 +48,7 @@ const InputForm:React.FC = () => {
 
                             <p className="text-[#303030] text-[0.875rem] mb-4">Write brief description of your projects.</p>
 
-                            <textarea className="flex-grow border border-[#e0e0e0] rounded-[4px] w-full resize-none p-2" />
+                            <textarea name="about" onChange={input_listener} className="flex-grow border border-[#e0e0e0] rounded-[4px] w-full resize-none p-2" />
 
                         </div>
 
@@ -50,7 +64,7 @@ const InputForm:React.FC = () => {
 
                             <p className="text-[#303030] text-[0.875rem] mb-4">Which industry most closely aligns with your company?</p>
 
-                            <input className="h-[47px] border border-[#e0e0e0] rounded-[4px] w-full px-4" />
+                            <input name="industry" onChange={input_listener} className="h-[47px] border border-[#e0e0e0] rounded-[4px] w-full px-4" />
 
                         </div>
 
@@ -60,7 +74,7 @@ const InputForm:React.FC = () => {
 
                             <p className="text-[#303030] text-[0.875rem] mb-4">Which industry most closely aligns with your company?</p>
 
-                            <input className="h-[47px] border border-[#e0e0e0] rounded-[4px] w-full px-4" />
+                            <input name="important" onChange={input_listener} className="h-[47px] border border-[#e0e0e0] rounded-[4px] w-full px-4" />
 
                         </div>
 
@@ -70,7 +84,7 @@ const InputForm:React.FC = () => {
 
                             <p className="text-[#303030] text-[0.875rem] mb-4">Are there specific design elements you want to see? Is there anything you do not want to see?</p>
 
-                            <input className="h-[47px] border border-[#e0e0e0] rounded-[4px] w-full px-4" />
+                            <input name="additional_info" onChange={input_listener} className="h-[47px] border border-[#e0e0e0] rounded-[4px] w-full px-4" />
 
                         </div>
 

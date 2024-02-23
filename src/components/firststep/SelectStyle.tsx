@@ -1,7 +1,11 @@
 import SELECT_DATA from "../../data/style_selection.json";
 import StyleCard from "./cards/StyleCard";
+import { IBasicFormProp } from "./interface";
 
-const SelectStlye:React.FC = () => {
+const SelectStlye:React.FC<IBasicFormProp> = ({
+    form,
+    setForm
+}) => {
     return (
         <div className="flex flex-col items-center w-full">
 
@@ -16,7 +20,7 @@ const SelectStlye:React.FC = () => {
 
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-[26px]">
                     {SELECT_DATA.map(props => (
-                        <StyleCard {...props} key={props.title}/>
+                        <StyleCard {...props} key={props.title} form={form} setForm={setForm}/>
                     ))}
                 </div>
 

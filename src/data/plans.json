@@ -15,7 +15,7 @@
     },
     {
         "id": "847203a9-6707-4b77-90f8-450e1f6955fd",
-        "title":"Starter",
+        "title":"Starter2",
         "list": [
             "1 Designer",
             "1-3 Designs",
@@ -25,11 +25,12 @@
             "Industry Standard Files"
         ],
         "original_cost": 38,
+        "popular": true,
         "cost":36
     },
     {
         "id": "2a88acdf-bca2-4360-afbe-66bc82695bbf",
-        "title":"Starter",
+        "title":"Starter3",
         "list": [
             "1 Designer",
             "1-3 Designs",

@@ -23,6 +23,7 @@ const FirstStep:React.FC<IFirstStepProps> = ({
     setStage
 }) => {
 
+
     return (
         <>
 
@@ -32,13 +33,13 @@ const FirstStep:React.FC<IFirstStepProps> = ({
 
         <FormProgress stage={1} />
 
-        <InputForm />
+        <InputForm form={form} setForm={setForm} />
 
-        <SelectStlye />
+        <SelectStlye form={form} setForm={setForm} />
 
         <ColorSection form={form} setForm={setForm} />
 
-        <UploadFile />
+        <UploadFile form={form} setForm={setForm} />
 
         <FormNavigatior setStage={setStage} nextStage={1} />
 

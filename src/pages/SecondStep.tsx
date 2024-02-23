@@ -6,8 +6,13 @@ import PlanSelect from "../components/secondstep/PlanSelect";
 import Footer from "../components/shared/Footer";
 import FormProgress from "../components/shared/FormProgress";
 import Nav from "../components/shared/Nav";
+import { IFirstStepProps } from "./FirstStep";
 
-const SecondStep:React.FC = () => {
+const SecondStep:React.FC<IFirstStepProps> = ({
+    form,
+    setForm,
+    setStage
+}) => {
     return (
         <>
 
@@ -17,9 +22,9 @@ const SecondStep:React.FC = () => {
 
         <FormProgress stage={2} />
 
-        <PlanSelect /> 
+        <PlanSelect form={form} setForm={setForm} /> 
 
-        <FormNavigatior />
+        <FormNavigatior setStage={setStage} nextStage={2} />
 
         <Services />
 

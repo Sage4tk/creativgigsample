@@ -1,13 +1,17 @@
 import Heading from "../components/firststep/Heading"
-import Services from "../components/firststep/Services"
-import FAQ from "../components/home/FAQ"
+import { IBasicFormProp } from "../components/firststep/interface"
 import Table from "../components/laststep/Table"
 import Top from "../components/laststep/Top"
 import Footer from "../components/shared/Footer"
 import FormProgress from "../components/shared/FormProgress"
 import Nav from "../components/shared/Nav"
 
-const LastStep:React.FC = () => {
+
+
+const LastStep:React.FC<IBasicFormProp> = ({
+    form,
+    setForm,
+}) => {
     return (
         <>
 
@@ -19,11 +23,7 @@ const LastStep:React.FC = () => {
 
         <Top />
 
-        <Table />
-
-        <Services />
-
-        <FAQ />
+        <Table form={form} setForm={setForm} />
 
         <Footer />
         </>
