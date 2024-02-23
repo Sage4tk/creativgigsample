@@ -1,3 +1,6 @@
+import PLANS from "../../data/plans.json";
+import PlanCard from "./cards/PlanCard";
+
 const PlanSelect:React.FC = () => {
     return (
         <div className="flex flex-col items-center w-full">
@@ -11,6 +14,14 @@ const PlanSelect:React.FC = () => {
                 </div>
 
 
+            </div>
+
+            <div className="w-full lg:w-[900px] md:w-[600px] flex flex-col md:flex-row flex-wrap justify-between pt-[36px]">
+                {
+                    PLANS.map((props, index) => (
+                        <PlanCard {...props} odd={index % 2 === 0} />
+                    ))
+                }
             </div>
         </div>
     )

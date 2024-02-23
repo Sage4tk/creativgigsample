@@ -4,6 +4,7 @@ import Index from './pages/Index';
 import HowItWorks from './pages/HowItWorks';
 import FirstStep from './pages/FirstStep';
 import SecondStep from './pages/SecondStep';
+import LastStep from './pages/LastStep';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/page3",
     element: <SecondStep /> 
+  },
+  {
+    path: "/page4",
+    element: <LastStep />
   }
 ]);
 
