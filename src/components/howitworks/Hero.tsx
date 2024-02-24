@@ -1,4 +1,15 @@
 const Hero:React.FC = () => {
+
+    const redirect_form = ():void => {
+        window.location.href = "/form";
+    }
+
+    const go_below = ():void => {
+        const target = document.querySelector("#main_body");
+
+        target?.scrollTo({behavior:"smooth"})
+    }
+
     return (
         <div style={{background: "linear-gradient(277.81deg, #DF15D7 -1.17%, #673DE6 92.93%)"}} className="flex flex-col items-center">
 
@@ -11,7 +22,8 @@ const Hero:React.FC = () => {
                         <h1 className="lg:text-[2.9375rem] text-[2rem] px-4 lg:px-0 text-white font-bold mb-3 md:text-left text-center">Stand Out with Stunning Business Card Designs</h1>
                         <p className="lg:text-[1.3125rem] text-[1rem] px-4 lg:px-0 text-white pb-10 md:text-left text-center">Make a lasting impression with our custom business card designs that captivate attention and leave a lasting impact. At Creative Gig, we specialize in creating unique and eye-catching business cards that help you stand out from the competition.</p>
 
-                        <button className="bg-[#DF15D7] lg:text-[1.5625rem] text-[1rem] rounded-[4px] text-white flex flex-row items-stretch justify-self-end mx-auto md:mx-0">
+                        <button onClick={redirect_form} className="bg-[#DF15D7] lg:text-[1.5625rem] text-[1rem] rounded-[4px] text-white flex flex-row items-stretch justify-self-end mx-auto md:mx-0 hover:scale-105 hover:shadow active:opacity-80">
+
 
                             
                             <div className="px-[22px] py-[16px] ">Get Started Now</div>
@@ -29,10 +41,10 @@ const Hero:React.FC = () => {
 
 
 
-                <div className="bg-[#DF15D7] lg:w-[75px] lg:h-[75px] w-[40px] h-[40px] flex items-center justify-center animate-bounce lg:bottom-[-37px] bottom-[-20px] rounded-full absolute z-10">
-                    <img className="lg:w-[30px] w-[15px] h-auto" src="/img/icons/down.svg" />
+                <a href="#main_body" className="bg-[#DF15D7] lg:w-[75px] lg:h-[75px] w-[40px] h-[40px] flex items-center justify-center animate-bounce lg:bottom-[-37px] bottom-[-20px] rounded-full absolute z-10">
+                    <img draggable={false} className="lg:w-[30px] w-[15px] h-auto" src="/img/icons/down.svg" />
 
-                </div>
+                </a>
 
             </div>
 

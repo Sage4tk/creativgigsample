@@ -11,7 +11,7 @@ const HowItWorks:React.FC = () => {
     return (
         <>
 
-        <Nav />
+        <Nav current="how" />
 
         <Hero />
 

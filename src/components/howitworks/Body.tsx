@@ -5,7 +5,7 @@ const Body:React.FC = () => {
     return (
         <div className="flex flex-col items-center">
 
-            <div className="xl:w-[1200px] lg:w-[1000px] w-full flex flex-col items-center relative pt-[100px] pb-[60px]">
+            <div id="main_body" className="xl:w-[1200px] lg:w-[1000px] w-full flex flex-col items-center relative pt-[100px] pb-[60px]">
 
                 {data.map((item, index) => (
                     <BodyCard {...item} reversed={index % 2 === 0} />

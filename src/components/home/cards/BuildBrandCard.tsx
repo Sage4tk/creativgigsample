@@ -12,7 +12,7 @@ const BuildBrandCard:React.FC<IBuildBrandProps> = ({
 }) => (
     <div className="bg-white rounded-[6px] lg:mb-0 mb-10 mx-[13px] xl:w-[308px] lg:w-[30%] w-[80%] p-[34px] custom-shadow flex flex-col items-center">
 
-        <img className="pb-[18px]" src={img} />
+        <img loading="lazy" className="pb-[18px]" src={img} />
 
         <p className="text-center text-main md:text-[1.5rem] text-[1.2rem] font-bold mb-[18px] leading-8">{title}</p>
         

@@ -14,7 +14,7 @@ const Index:React.FC = () => {
     return (
         <>
 
-        <Nav />
+        <Nav current="home" />
 
         <Hero />
         

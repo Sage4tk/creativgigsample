@@ -21,7 +21,7 @@ const FaqCard:React.FC<IFaqCardProps> = ({
                 <p className="lg:text-[1.375rem] text-[1rem] text-main w-[85%] md:w-auto">{title}</p>
 
                 <div className="">
-                    <img className="" src={openDescription ? "/img/icons/minus.svg":"/img/icons/plus.svg"} />
+                    <img loading="lazy" className="" src={openDescription ? "/img/icons/minus.svg":"/img/icons/plus.svg"} />
                 </div>
             </button>
             {openDescription && (
