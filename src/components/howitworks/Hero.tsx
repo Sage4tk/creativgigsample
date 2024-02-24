@@ -4,12 +4,6 @@ const Hero:React.FC = () => {
         window.location.href = "/form";
     }
 
-    const go_below = ():void => {
-        const target = document.querySelector("#main_body");
-
-        target?.scrollTo({behavior:"smooth"})
-    }
-
     return (
         <div style={{background: "linear-gradient(277.81deg, #DF15D7 -1.17%, #673DE6 92.93%)"}} className="flex flex-col items-center">
 

@@ -3,11 +3,9 @@ import BaseTable from "./card/BaseTable";
 import RowBase from "./card/RowBase";
 import STYLE_DATA from "../../data/style_selection.json";
 import { useMemo } from "react";
-import StyleCard from "../firststep/cards/StyleCard";
 
 const Table:React.FC<IBasicFormProp> = ({
     form,
-    setForm
 }) => {
 
     // find the style
