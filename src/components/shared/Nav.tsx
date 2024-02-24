@@ -74,7 +74,7 @@ const Nav:React.FC<INavProps> = ({
 
             <div className="flex flex-col items-center">
                 <div className="xl:w-[1200px] lg:w-[1000px] w-full lg:py-[12px] py-[18px] flex flex-row justify-between relative">
-                    <Link to={"/"}>
+                    <Link className="lg:mx-0 mx-auto" to={"/"}>
                     <img className="w-[181px] h-[62.03px] lg:mx-0 mx-auto" src="/img/logo.svg" />
                     </Link>
 
