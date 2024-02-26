@@ -74,8 +74,8 @@ const Nav:React.FC<INavProps> = ({
 
             <div className="flex flex-col items-center">
                 <div className="xl:w-[1200px] lg:w-[1000px] w-full lg:py-[12px] py-[18px] flex flex-row justify-between relative">
-                    <Link className="lg:mx-0 mx-auto" to={"/"}>
-                    <img className="w-[181px] h-[62.03px] lg:mx-0 mx-auto" src="/img/logo.svg" />
+                    <Link className="" to={"/"}>
+                    <img className="lg:w-[160px] w-[140px] lg:pl-0 pl-[20px]  h-auto" src="/img/logo.svg" />
                     </Link>
 
                     {/* <div className={`lg:flex lg:w-auto lg:h-auto lg:top-auto lg:left-auto lg:relative flex-row items-center fixed bg-white top-0 left-[${navOpen ? "0px":"100vw"}] w-screen h-screen`}> */}

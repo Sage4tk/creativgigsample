@@ -16,7 +16,7 @@ const Hero:React.FC = () => {
                         <h1 className="lg:text-[2.9375rem] text-[2rem] px-4 lg:px-0 text-white font-bold mb-3 md:text-left text-center">Stand Out with Stunning Business Card Designs</h1>
                         <p className="lg:text-[1.3125rem] text-[1rem] px-4 lg:px-0 text-white pb-10 md:text-left text-center">Make a lasting impression with our custom business card designs that captivate attention and leave a lasting impact. At Creative Gig, we specialize in creating unique and eye-catching business cards that help you stand out from the competition.</p>
 
-                        <button onClick={redirect_form} className="bg-[#DF15D7] lg:text-[1.5625rem] text-[1rem] rounded-[4px] text-white flex flex-row items-stretch justify-self-end mx-auto md:mx-0 hover:scale-105 hover:shadow active:opacity-80">
+                        <button onClick={redirect_form} className="bg-[#DF15D7] lg:text-[1.5625rem] text-[1rem] rounded-[4px] text-white flex flex-row items-stretch justify-self-end mx-auto md:mx-0 hover:shadow active:opacity-80">
 
 
                             

@@ -42,9 +42,9 @@ const Table:React.FC<IBasicFormProp> = ({
                     </RowBase>  
                                  
                     <RowBase heading="Which colors do you prefer?">
-                        <div className="flex flex-row flex-wrap">
+                        <div className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-[22px]">
                             {form.colors.map(colors => (
-                                <div key={colors} style={{backgroundColor: colors}} className="w-[140px] h-[129px] mr-5 rounded-[6px] border-[#C913CD] border-[3px] relative">
+                                <div key={colors} style={{backgroundColor: colors}} className="rounded-[6px] aspect-square border-[#C913CD] border-[3px] relative">
                                     <div className="absolute top-[-1px] right-[-1px]">
                                         <img src="/img/icons/check.svg" />
                                     </div>

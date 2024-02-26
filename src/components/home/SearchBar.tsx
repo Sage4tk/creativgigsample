@@ -4,7 +4,7 @@ const SearchBar:React.FC = () => {
     return (
         <div className="flex flex-col items-center">
 
-            <div className="xl:w-[1200px] lg:w-[1000px] md:w-[600px] w-screen">
+            <div className="xl:w-[1200px] lg:w-[1000px] md:w-[600px] w-[calc(100%-40px)]">
                 
                 <div className="bg-white rounded-[6px]  lg:px-[53px] px-[16px] lg:pt-[36px] pt-[16px] lg:pb-[41px] pb-[24px] border border-border translate-y-[-100px]">
 
@@ -19,17 +19,17 @@ const SearchBar:React.FC = () => {
 
                     </div>
 
-                    <div className="border border-[#CACACA] rounded-[6px] p-[9px] flex flex-row justify-between mb-[18px]">
-                        <input placeholder="Example: Business Card" className="lg:text-[1.125rem] text-[0.8rem] flex-grow lg:px-[1rem] px-[0.75rem]" />
+                    <div className="border border-[#CACACA] rounded-[12px] lg:p-[6px] p-[4px] flex flex-row justify-between mb-[18px]">
+                        <input placeholder="Example: Business Card" className="lg:text-[1.125rem] text-[0.6rem] flex-grow lg:px-[1rem] px-[0.75rem] outline-none" />
 
-                        <button className="bg-sub font-bold lg:text-[1.125rem] text-[0.65rem] text-white rounded-[9px] flex flex-row active:opacity-70">
+                        <button className="bg-sub font-bold lg:text-[1.125rem] text-[0.6rem] text-white rounded-[9px] flex flex-row active:opacity-70">
 
-                            <span className="lg:px-[18px] lg:py-[12px] py-[8px] px-[0px] lg:w-auto w-[75px] ">
+                            <span className="lg:px-[18px] lg:py-[12px] py-[8px] px-[0px] lg:w-auto w-[100px] ">
                             Get Started Now
 
                             </span>
-                            <div className="bg-main h-full lg:w-[41px] w-[32px] rounded-[9px] flex items-center justify-center">
-                                <img className="h-auto w-[10px]" src="/img/icons/go.svg" />
+                            <div className="bg-main h-full lg:w-[41px] w-[28px] rounded-[9px] flex items-center justify-center">
+                                <img className="h-auto lg:w-[10px] w-[6px]" src="/img/icons/go.svg" />
                             </div>
                         </button>
                     </div>

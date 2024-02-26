@@ -38,7 +38,7 @@ const FormProgress:React.FC<IFormProgressProps> = ({
     return (
         <div className="flex felx-col items-center relative">
 
-            <div className="w-full border border-border lg:w-[787px] md:w-[500px] absolute rounded-[6px] bg-white z-10 py-[16px] px-[8px] md:px-[25px] left-[50%] translate-x-[-50%]">
+            <div className="w-[calc(100%-40px)] border border-border lg:w-[787px] md:w-[500px] absolute rounded-[6px] bg-white z-10 py-[16px] px-[8px] md:px-[25px] left-[50%] translate-x-[-50%]">
                 <div style={{width: lineWidth + "px"}} className="absolute left-[50%] translate-x-[-50%] h-[30px] flex items-center">
                 <div className="border border-main h-[6px] w-full">
                     <div style={{width: stage === 1 ? "33%": stage === 2 ? "66%" : stage === 3 ? "100%": "0px" }} className={`h-full bg-main`}></div>
