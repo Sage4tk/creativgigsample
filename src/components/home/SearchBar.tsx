@@ -6,7 +6,7 @@ const SearchBar:React.FC = () => {
 
             <div className="xl:w-[1200px] lg:w-[1000px] md:w-[600px] w-[calc(100%-40px)]">
                 
-                <div className="bg-white rounded-[6px]  lg:px-[53px] px-[16px] lg:pt-[36px] pt-[16px] lg:pb-[41px] pb-[24px] border border-border translate-y-[-100px]">
+                <div className="bg-white rounded-[6px]  lg:px-[53px] px-[16px] lg:pt-[36px] pt-[16px] lg:pb-[41px] pb-[6px] border border-border translate-y-[-100px]">
 
                     <div className="flex flex-row justify-between items-center mb-[13px]">
 
@@ -36,11 +36,11 @@ const SearchBar:React.FC = () => {
 
                     <div className="flex flex-row">
 
-                        <span className="lg:text-[1.25rem] text-[1rem] text-[#545454]">Most Popular:</span>
+                        <span className="lg:text-[1.25rem] text-[0.7rem] text-[#545454]">Most Popular:</span>
 
                         <div className="flex-grow px-[18px] flex flex-wrap">
                             {popular.map((item, index) => (
-                                <button className="bg-[#B4B4B445] lg:text-[1rem] text-[0.75rem] mb-4 text-[#303030] px-[19px] py-[5px] rounded-[30px] mr-[11px] active:opacity-25" key={index}>
+                                <button className="bg-[#B4B4B445] lg:text-[1rem] text-[0.6rem] mb-4 text-[#303030] px-[19px] py-[5px] rounded-[30px] mr-[11px] active:opacity-25" key={index}>
                                     {item}
                                 </button>
                             ))}
