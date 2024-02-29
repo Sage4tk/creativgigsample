@@ -41,7 +41,7 @@ const Nav:React.FC<INavProps> = ({
                 <div className="xl:w-[1200px] lg:w-[1000px] py-[8px] flex flex-row justify-between">
 
                     <div>
-                        <span className="text-white lg:text-[1.0625rem] text-[0.8rem]">Become our partner and get up to 90% discount</span>
+                        <span className="text-white text-[0.875rem]">Become our partner and get up to 90% discount</span>
                     </div>
 
                     <div className="lg:flex hidden flex-row items-center">

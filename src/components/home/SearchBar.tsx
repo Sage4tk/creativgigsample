@@ -6,11 +6,11 @@ const SearchBar:React.FC = () => {
 
             <div className="xl:w-[1200px] lg:w-[1000px] md:w-[600px] w-[calc(100%-40px)]">
                 
-                <div className="bg-white rounded-[6px]  lg:px-[53px] px-[16px] lg:pt-[36px] pt-[16px] lg:pb-[41px] pb-[6px] border border-border translate-y-[-100px]">
+                <div className="bg-white rounded-[6px]  lg:px-[44px] px-[16px] lg:pt-[30px] pt-[16px] lg:pb-[30px] pb-[6px] border border-border translate-y-[-100px]">
 
                     <div className="flex flex-row justify-between items-center mb-[13px]">
 
-                        <span className="text-sub lg:text-[2.1875rem] text-[1rem] font-bold">What do you need?</span>
+                        <span className="text-sub lg:text-[2rem] text-[1rem] font-bold">What do you need?</span>
 
                         <button className="text-[#545454] lg:text-[1.25rem] text-[0.6rem]">
                             See all products
