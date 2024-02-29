@@ -73,7 +73,7 @@ const Nav:React.FC<INavProps> = ({
                                     <div className="absolute z-[1000] bg-white rounded-[4px] border py-[12px]">
                                         
                                         <div className="px-4 flex flex-col items-center">
-                                            <p className="font-bold text-main mb-2 text-[0.8rem]">CURRENCIES</p>
+                                            <p className="font-bold text-main mb-2 text-[0.8fhrem]">CURRENCIES</p>
 
                                             <div className="flex flex-row items-center mb-2 cursor-pointer">
 
@@ -143,8 +143,8 @@ const Nav:React.FC<INavProps> = ({
                     <div className={`lg:flex lg:w-auto lg:h-auto lg:top-auto lg:left-auto lg:relative flex-row items-center fixed bg-white top-0 transition-all ${navOpen ? "left-0":"left-[100vw]"} w-screen h-screen z-20`}>
 
                         <div className="flex lg:w-auto lg:flex-row xl:mr-[160px] lg:mr-[50px] flex-col items-center w-full p-8 lg:p-0">
-                            <div className="lg:mr-[20px] mb-6 lg:mb-0 relative">
-                                <Link to={"/"} onMouseOver={() => categories_hover(true)} onMouseOut={() => categories_hover(false)}>
+                            <div className="lg:mr-[20px] mb-6 lg:mb-0 relative" onMouseOver={() => categories_hover(true)} onMouseOut={() => categories_hover(false)}>
+                                <Link to={"/"}>
                                     <span className="text-main_text">Categories</span>
 
                                     {current === "home" && <div className="w-100 bg-other_pink h-[1px] translate-y-1"></div>}
@@ -152,7 +152,7 @@ const Nav:React.FC<INavProps> = ({
 
 
                                 {categoriesHover && (
-                                    <div className="absolute py-4 px-3 rounded-[4px] border bg-white z-[100] grid grid-cols-2 left-0 w-[400px] gap-6"> 
+                                    <div className="absolute py-4 px-3 rounded-[4px] border bg-white z-[100] grid grid-cols-2 left-0 w-[400px] gap-6 mt-[100]"> 
                                         <div className="">
                                             <p className="font-bold text-[0.9rem] text-main mb-1">DESIGN</p>
 
