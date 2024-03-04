@@ -15,7 +15,9 @@ const Nav:React.FC<INavProps> = ({
     /** STATES **/
     const [navOpen, setNavOpen] = useState<boolean>(false);
     const [currencyHover, setCurrencyHover] = useState<boolean>(false);
-    const [categoriesHover, setCategoriesHover] = useState<boolean>(false); 
+    const [categoriesHover, setCategoriesHover] = useState<boolean>(false);
+    const [accountHover, setAccountHover] = useState<boolean>(false);
+
 
     const categories_hover = (inside:boolean):void => {
         // check if client is mobile first
@@ -28,6 +30,13 @@ const Nav:React.FC<INavProps> = ({
         // check if client is mobile first
         if (!check_mobile()) {
             setCurrencyHover(inside);
+        }
+    }
+
+    const account_hover = (inside:boolean):void => {
+        // check if client is mobile first
+        if (!check_mobile()) {
+            setAccountHover(inside);
         }
     }
 
@@ -109,12 +118,58 @@ const Nav:React.FC<INavProps> = ({
                         <span className="h-[17px] w-[1px] bg-white mx-[18px]">
 
                         </span>
+                        
 
-                        <Link to="/profile" className="flex flex-row items-center">
+                        <div className="relative" onMouseOver={() => account_hover(true)} onMouseOut={() =>account_hover(false)}>
+                            <Link to="/profile" className="flex flex-row items-center">
 
-                            <img src="/img/icons/nav/account.svg" className="w-[17px] h-[17px] mr-[4px]" />
-                            <span className="text-white font-[0.875rem]">Account</span>
-                        </Link>
+                                <img src="/img/icons/nav/account.svg" className="w-[17px] h-[17px] mr-[4px]" />
+                                <span className="text-white font-[0.875rem]">Account</span>
+                            </Link>
+
+                            {(accountHover) && (
+                                <div className={`absolute z-[1000] bg-white rounded-[4px] border flex flex-col w-[180px] text-[1rem] text-[#303030] overflow-hidden`}>
+                                        
+                                    <div className="flex flex-row  w-full py-2 px-3  border border-[#d9d9d9] hover:bg-[#d9d9d9] cursor-pointer select-none">
+                                        <img className="mr-2" src="/img/icons/profile/dashboard.svg" />
+                                        <span className="">Dashboard</span>
+                                    </div>
+                                    <div className="flex flex-row  w-full py-2 px-3  border border-[#d9d9d9] hover:bg-[#d9d9d9] cursor-pointer select-none">
+                                        <img className="mr-2" src="/img/icons/profile/orders.svg" />
+                                        <span className="">Orders</span>
+                                    </div>
+                                    <div className="flex flex-row  w-full py-2 px-3  border border-[#d9d9d9] hover:bg-[#d9d9d9] cursor-pointer select-none">
+                                        <img className="mr-2" src="/img/icons/profile/ticket.svg" />
+                                        <span className="">Submit Ticket</span>
+                                    </div>
+                                    <div className="flex flex-row  w-full py-2 px-3  border border-[#d9d9d9] hover:bg-[#d9d9d9] cursor-pointer select-none">
+                                        <img className="mr-2" src="/img/icons/profile/partner.svg" />
+                                        <span className="">Partner</span>
+                                    </div>
+                                    <div className="flex flex-row  w-full py-2 px-3  border border-[#d9d9d9] hover:bg-[#d9d9d9] cursor-pointer select-none">
+                                        <img className="mr-2" src="/img/icons/profile/downloads.svg" />
+                                        <span className="">Downloads</span>
+                                    </div>
+                                    <div className="flex flex-row  w-full py-2 px-3  border border-[#d9d9d9] hover:bg-[#d9d9d9] cursor-pointer select-none">
+                                        <img className="mr-2" src="/img/icons/profile/addresses.svg" />
+                                        <span className="">Addresses</span>
+                                    </div>
+                                    <div className="flex flex-row  w-full py-2 px-3  border border-[#d9d9d9] hover:bg-[#d9d9d9] cursor-pointer select-none">
+                                        <img className="mr-2" src="/img/icons/profile/account.svg" />
+                                        <span className="">Account Details</span>
+                                    </div>
+                                    <div className="flex flex-row  w-full py-2 px-3  border border-[#d9d9d9] hover:bg-[#d9d9d9] cursor-pointer select-none">
+                                        <img className="mr-2" src="/img/icons/profile/logout.svg" />
+                                        <span className="">Log out</span>
+                                    </div>
+                                   
+                                   
+                                    
+
+                                </div>
+                            )}
+
+                        </div>
 
                         <span className="h-[17px] w-[1px] bg-white mx-[18px]">
 

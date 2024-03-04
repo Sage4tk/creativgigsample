@@ -1,4 +1,6 @@
-export const PALLETE_ONE = [
+[{
+    "id":"orange",
+    "colors":[
     "#FFE0B2",
     "#FFCC80",
     "#FFB74D",
@@ -8,9 +10,12 @@ export const PALLETE_ONE = [
     "#F57C01",
     "#EF6C00",
     "#E65100"
-];
+    ]
+},
 
-export const PALLETE_TWO = [
+{
+    "id":"purple",
+    "colors":[
     "#D1C4E9",
     "#B39DDB",
     "#9575CD",
@@ -20,9 +25,12 @@ export const PALLETE_TWO = [
     "#512DA8",
     "#4527A0",
     "#321B92"
-];
+]
+},
 
-export const PALLETE_THREE = [
+{
+    "id": "yellow",
+    "colors":[
     "#FFF9C4",
     "#FFF59D",
     "#FFF176",
@@ -32,9 +40,12 @@ export const PALLETE_THREE = [
     "#FBC02D",
     "#F9A825",
     "#F57F16"
-];
+    ]
+},
 
-export const PALLETE_FOUR = [
+{
+    "id":"black",
+    "colors":[
     "#EEEEEE",
     "#D0D0D0",
     "#B2B2B2",
@@ -44,9 +55,11 @@ export const PALLETE_FOUR = [
     "#3B3B3B",
     "#1D1D1D",
     "#000000"
-];
+]},
 
-export const PALLETE_FIVE = [
+{
+    "id":"red",
+    "colors":[
     "#FFCDD2",
     "#EF9A9A",
     "#E57373",
@@ -56,9 +69,12 @@ export const PALLETE_FIVE = [
     "#D32F2F",
     "#C62828",
     "#B71C1C"
-];
+]
+},
 
-export const PALLETE_SIX = [
+{
+    "id":"pink",
+    "colors":[
     "#F8BBD0",
     "#F490B1",
     "#F06292",
@@ -68,9 +84,11 @@ export const PALLETE_SIX = [
     "#C2185B",
     "#AD1457",
     "#880E4F"
-];
+]},
 
-export const PALLETE_SEVEN = [
+{
+    "id":"green",
+    "colors":[
     "#DCEDC8",
     "#C5E1A5",
     "#AED581",
@@ -80,9 +98,11 @@ export const PALLETE_SEVEN = [
     "#689F38",
     "#558B2F",
     "#33691E"
-];
+]},
 
-export const PALLETE_EIGHT = [
+{
+    "id":"cyan",
+    "colors":[
     "#B2EBF2",
     "#80DEEA",
     "#4DD0E1",
@@ -92,9 +112,11 @@ export const PALLETE_EIGHT = [
     "#0097A7",
     "#01838F",
     "#006064"
-];
+]},
 
-export const PALLETE_NINE = [
+{
+    "id": "blue",
+    "colors":[
     "#BBDEFB",
     "#90CAF9",
     "#64B5F6",
@@ -104,9 +126,11 @@ export const PALLETE_NINE = [
     "#1A76D2",
     "#1665C0",
     "#0D47A1"
-];
+]},
 
-export const PALLETE_TEN = [
+{
+    "id":"random",
+    "colors":[
     "#F44338",
     "#4CAF51",
     "#2296F4",
@@ -116,4 +140,5 @@ export const PALLETE_TEN = [
     "#01BCD5",
     "#795549",
     "#777778"
-];
+]}
+]

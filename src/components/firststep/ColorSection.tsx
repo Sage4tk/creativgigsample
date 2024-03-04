@@ -1,6 +1,6 @@
 import { IForm } from "./interface";
 import ColorSelection from "./cards/ColorSelection";
-import { PALLETE_EIGHT, PALLETE_FIVE, PALLETE_FOUR, PALLETE_NINE, PALLETE_ONE, PALLETE_SEVEN, PALLETE_SIX, PALLETE_TEN, PALLETE_THREE, PALLETE_TWO } from "../../data/pallete";
+import PALLETE from "../../data/pallete.json";
 
 interface IColorSectionProps {
     form: IForm,
@@ -25,66 +25,14 @@ const ColorSection:React.FC<IColorSectionProps> = ({
 
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-[23px]">
 
-                    <ColorSelection
-                        colors={PALLETE_ONE}
-                        form={form}
-                        setForm={setForm}
-                    />
+                    {PALLETE.map(props => (
+                        <ColorSelection
+                            colors={props}
+                            form={form}
+                            setForm={setForm}
+                        />
+                    ))}
 
-                    <ColorSelection
-                        colors={PALLETE_TWO}
-                        form={form}
-                        setForm={setForm}
-                    />
-
-                    <ColorSelection
-                        colors={PALLETE_THREE}
-                        form={form}
-                        setForm={setForm}
-                    />
-
-                    <ColorSelection
-                        colors={PALLETE_FOUR}
-                        form={form}
-                        setForm={setForm}
-                    />
-
-                    <ColorSelection
-                        colors={PALLETE_FIVE}
-                        form={form}
-                        setForm={setForm}
-                    />
-
-                    <ColorSelection
-                        colors={PALLETE_SIX}
-                        form={form}
-                        setForm={setForm}
-                    />
-
-                    <ColorSelection
-                        colors={PALLETE_SEVEN}
-                        form={form}
-                        setForm={setForm}
-                    />
-
-                    <ColorSelection
-                        colors={PALLETE_EIGHT}
-                        form={form}
-                        setForm={setForm}
-                    />
-
-                    <ColorSelection
-                        colors={PALLETE_NINE}
-                        form={form}
-                        setForm={setForm}
-                    />
-
-                    <ColorSelection
-                        colors={PALLETE_TEN}
-                        form={form}
-                        setForm={setForm}
-                    />
-                    
                 </div>
 
             </div>  

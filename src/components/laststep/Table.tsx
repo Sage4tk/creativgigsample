@@ -3,9 +3,12 @@ import BaseTable from "./card/BaseTable";
 import RowBase from "./card/RowBase";
 import STYLE_DATA from "../../data/style_selection.json";
 import { useMemo } from "react";
+import ColorSelection from "../firststep/cards/ColorSelection";
+import PALETTE from "../../data/pallete.json";
 
 const Table:React.FC<IBasicFormProp> = ({
     form,
+    setForm
 }) => {
 
     // find the style
@@ -43,13 +46,13 @@ const Table:React.FC<IBasicFormProp> = ({
                                  
                     <RowBase heading="Which colors do you prefer?">
                         <div className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-[22px]">
-                            {form.colors.map(colors => (
-                                <div key={colors} style={{backgroundColor: colors}} className="rounded-[6px] aspect-square border-[#C913CD] border-[3px] relative">
-                                    <div className="absolute top-[-1px] right-[-1px]">
-                                        <img src="/img/icons/check.svg" />
-                                    </div>
-                                </div>
-                            ))}
+                            {form.colors.map(item => {
+                                const find_palette = PALETTE.find(id => id.id === item);
+
+                                if (!find_palette) return (null);
+
+                                return <ColorSelection form={form} setForm={setForm} colors={find_palette} />
+                            })}
                         </div>
                     </RowBase>     
 

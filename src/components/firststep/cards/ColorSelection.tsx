@@ -1,10 +1,14 @@
+import { useMemo } from "react";
 import {  IForm } from "../interface";
 
 interface IColorSelectionProps {
     width?: string,
     form: IForm,
     setForm: (arg:IForm) => void,
-    colors: Array<string>
+    colors: {
+        id: string,
+        colors: Array<string>
+    }
     // colorSet: Array<string>
 }
   
@@ -51,11 +55,21 @@ const ColorSelection:React.FC<IColorSelectionProps> = ({
 
     }
 
+    const checked = useMemo(() => {
+        return form.colors.includes(colors.id);
+    }, [form.colors]);
+
     return (
-        <div style={{width: width}} className={`grid grid-cols-3 aspect-square rounded-[9px] overflow-hidden`}>
-            {colors.map(item => (
-                <div onClick={() => add_color(item)} key={item} style={{backgroundColor: item}} className={`aspect-square relative`}>
-                    {form.colors.includes(item) && <img src="/img/icons/check.svg" className="w-[30%] aspect-square absolute top-[10%] right-[10%] select-none" />}
+        <div onClick={() => add_color(colors.id)} style={{width: width}} className={`box-border grid grid-cols-3 aspect-square rounded-[9px] overflow-hidden relative`}>
+
+            {checked && (
+                <div className="absolute w-full h-full border-4 rounded-[9px] z-10 border-border top-0 left-0">
+                    <img src="/img/icons/check.svg" className="absolute top-1 right-1" />
+                </div>
+            )}
+            {colors.colors.map(item => (
+                <div key={item} style={{backgroundColor: item}} className={`aspect-square relative`}>
+              
                 </div>
             ))}
         </div>
